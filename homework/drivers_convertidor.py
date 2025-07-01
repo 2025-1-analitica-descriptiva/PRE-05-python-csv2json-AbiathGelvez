@@ -13,6 +13,6 @@ def convert_csv_to_json(csv_path, json_path):
     with open(json_path, mode="w", encoding="utf-8") as jsonfile:
         json.dump(drivers, jsonfile, indent=2)
 
-if __name__ == "__main__":
-    os.makedirs("files", exist_ok=True)
-    convert_csv_to_json("files/drivers.csv", "files/drivers.json")
+# ✅ Ejecuta la conversión inmediatamente al importar
+os.makedirs("files", exist_ok=True)
+convert_csv_to_json("files/drivers.csv", "files/drivers.json")
